@@ -7,7 +7,7 @@
 
 #include "../include/my.h"
 
-void my_printf(char *type, ...)
+int my_printf(char *type, ...)
 {
     va_list list;
     int i = 0;
@@ -16,16 +16,10 @@ void my_printf(char *type, ...)
         if (type[i] == '%') {
             i += 1;
             check_type(type, i, list);
-            i += 1;
-        }
-        if (type[i] == 92) {
-            i += 1;
-            check_back_slash(type, i);
-            i += 1;
         }
         else
             my_putchar(type[i]);
     }
     va_end (list);
-    return;
+    return (0);
 }

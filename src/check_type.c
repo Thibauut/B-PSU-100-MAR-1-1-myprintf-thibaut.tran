@@ -10,17 +10,18 @@
 int check_type(char *type, int i, va_list list)
 {
     for (; type[i] != '\0'; i += 1) {
-        if (type[i] == 'c') {
-            my_putchar(va_arg(list, int));
-            return (i);
-        }
-        if (type[i] == 's') {
-            my_putstr(va_arg(list, char *));
-            return (i);
-        }
-        if (type[i] == 'i') {
-            my_put_nbr(va_arg(list, int));
-            return (i);
+        switch (type[i])
+        {
+            case 'c' : my_putchar(va_arg(list, int));
+                return (i);
+            case 's' : my_putstr(va_arg(list, char *));
+                return (i);
+            case 'i' : my_put_nbr(va_arg(list, int));
+                return (i);
+            case 'd' : my_put_nbr(va_arg(list, int));
+                return (i);
+            case 'b' : binary_conv(va_arg(list, int));
+                return (i);
         }
     }
     return (i);

@@ -18,8 +18,8 @@ void my_put_nbr(int nb);
 void my_putchar(char c);
 void my_putstr(char const *str);
 int my_strlen(char const *str);
-void my_printf(char *s, ...);
+int my_printf(char *s, ...);
 int check_type(char *type, int i, va_list list);
-int check_back_slash(char *type, int i);
+int binary_conv(unsigned int nb);
 
 #endif

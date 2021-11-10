@@ -10,8 +10,9 @@ SRC	=	src/my_printf.c	\
 		src/my_putstr.c	\
 		src/my_putchar.c	\
 		src/my_put_nbr.c	\
-		src/check_back_slash.c	\
-		src/check_type.c
+		src/check_type.c	\
+		src/binary_conv.c	\
+		main.c
 
 OBJ	=	$(SRC:.c=.o)
 
