@@ -7,7 +7,7 @@
 
 #include "../include/my.h"
 
-int binary_conv(unsigned int nb)
+int nb_to_binary(unsigned int nb)
 {
     int i = 0;
     int *bin_nb = malloc(sizeof(int) * (nb + 1));

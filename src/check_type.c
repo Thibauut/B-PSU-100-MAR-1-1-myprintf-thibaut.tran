@@ -20,7 +20,9 @@ int check_type(char *type, int i, va_list list)
                 return (i);
             case 'd' : my_put_nbr(va_arg(list, int));
                 return (i);
-            case 'b' : binary_conv(va_arg(list, int));
+            case 'b' : nb_to_binary(va_arg(list, int));
+                return (i);
+            case 'S' : my_super_putstr(va_arg(list, char *));
                 return (i);
         }
     }
