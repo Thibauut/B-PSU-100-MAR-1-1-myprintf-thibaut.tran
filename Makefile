@@ -5,17 +5,17 @@
 ## Makefile
 ##
 
-SRC	=	src/my_printf.c	\
-		src/my_strlen.c	\
-		src/my_putstr.c	\
-		src/my_putchar.c	\
+SRC	=	src/check_type.c	\
+		src/my_printf.c	\
 		src/my_put_nbr.c	\
-		src/check_type.c	\
-		src/nb_to_binary.c	\
-		src/my_super_putstr.c	\
-		src/my_getnbr.c	\
-		src/my_strcpy.c	\
-		src/str_to_octal.c
+		src/my_put_to_binary.c	\
+		src/my_put_to_hexadecimal.c	\
+		src/my_put_to_octal.c	\
+		src/my_put_uns_nbr.c	\
+		src/my_putchar.c	\
+		src/my_putstr.c	\
+		src/my_strdup.c	\
+		src/my_strlen.c
 
 OBJ	=	$(SRC:.c=.o)
 

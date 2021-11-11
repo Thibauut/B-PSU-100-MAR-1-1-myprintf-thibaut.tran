@@ -17,15 +17,19 @@
 
 void my_put_nbr(int nb);
 void my_putchar(char c);
-void my_putstr(char const *str);
+void my_putstr(char *str);
+char *my_strdup(char *src);
 int my_strlen(char const *str);
-int my_getnbr(char const *str);
-char *my_strcpy(char *dest, char const *src);
 int my_printf(char *s, ...);
+void my_put_uns_nbr(unsigned int nb);
 int check_type(char *type, int i, va_list list);
+int check_type2(char *type, int i, va_list list);
+void str_to_octal(char *str);
+void str_to_octal2(char *str, int i);
 int nb_to_binary(unsigned int nb);
-void my_super_putstr(char *str);
-void str_to_octal(char *str, int i);
+int nb_to_octal(unsigned int nb);
+int nb_to_hexadecimal_for_maj(unsigned int nb);
+int nb_to_hexadecimal_for_min(unsigned int nb);
 
 
 #endif

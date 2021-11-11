@@ -15,6 +15,8 @@ int my_printf(char *type, ...)
     for (; type[i] != '\0'; i += 1) {
         if (type[i] == '%') {
             i += 1;
+            while (type[i] == ' ')
+                i += 1;
             check_type(type, i, list);
         }
         else
