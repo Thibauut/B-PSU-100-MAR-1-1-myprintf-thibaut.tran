@@ -6,6 +6,8 @@
 */
 
 #include "../include/my.h"
+#define ctoi(x) ((x) - 48)
+#define itoc(x) ((x) + 48)
 
 int my_printf(char *type, ...)
 {
@@ -18,14 +20,31 @@ int my_printf(char *type, ...)
             while (type[i] == ' ')
                 i += 1;
             if (type[i] == '%')
-                i++;
+                i += 1;
+            if (type[i] <= '9' && type[i] >= '0')
+                check_nb(type, i);
             i = check_type(type, i, list);
             if (i == 84)
                 return 84;
-        }
-        else
+        } else
             my_putchar(type[i]);
     }
     va_end (list);
     return (0);
+}
+
+int check_nb(char *type, int i)
+{
+    int nb = 0;
+    while (type[i] <= 57 && type[i] >= 48) {
+        nb  = nb + ctoi(type[i]);
+        nb = nb * 10;
+        i += 1;
+    }
+    nb = nb / 10;
+    while (nb > 0) {
+        nb -= 1;
+        my_putchar(' ');
+    }
+    return (i);
 }
