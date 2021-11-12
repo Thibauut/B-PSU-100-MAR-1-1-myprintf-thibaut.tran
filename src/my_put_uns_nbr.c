@@ -9,13 +9,13 @@
 
 void my_put_uns_nbr(unsigned int nb)
 {
-    unsigned int a;
+    unsigned int a = 0;
     if (nb >= 0)
     {
         if (nb >= 10) {
             a = (nb % 10);
             nb = (nb - a) / 10;
-            my_put_nbr(nb);
+            my_put_uns_nbr(nb);
             my_putchar(48 + a);
         }
         else

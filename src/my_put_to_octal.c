@@ -6,9 +6,7 @@
 */
 
 #include "../include/my.h"
-
 #define ctoi(x) ((x) - 48)
-
 #define itoc(x) ((x) + 48)
 
 void str_to_octal2(char *str, int i)

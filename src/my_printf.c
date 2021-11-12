@@ -17,7 +17,11 @@ int my_printf(char *type, ...)
             i += 1;
             while (type[i] == ' ')
                 i += 1;
-            check_type(type, i, list);
+            if (type[i] == '%')
+                i++;
+            i = check_type(type, i, list);
+            if (i == 84)
+                return 84;
         }
         else
             my_putchar(type[i]);

@@ -6,11 +6,8 @@
 */
 
 #include "../include/my.h"
-
 #define itoc(x) ((x) + 48)
-
 #define itoc2(x) ((x) + 55)
-
 #define itoc3(x) ((x) + 87)
 
 int nb_to_hexadecimal_for_maj(unsigned int nb)
