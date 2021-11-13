@@ -9,7 +9,6 @@
 
 int check_type2(char *type, int i, va_list list)
 {
-    for (; type[i] != '\0'; i += 1) {
         switch (type[i])
         {
             case 'o' : nb_to_octal(va_arg(list, int));
@@ -25,13 +24,11 @@ int check_type2(char *type, int i, va_list list)
             default :
                 return (84);
         }
-    }
     return (i);
 }
 
 int check_type(char *type, int i, va_list list)
 {
-    for (; type[i] != '\0'; i += 1) {
         switch (type[i])
         {
             case 'c' : my_putchar(va_arg(list, int));
@@ -49,6 +46,5 @@ int check_type(char *type, int i, va_list list)
             default :
                 check_type2(type, i, list);
         }
-    }
     return (i);
 }

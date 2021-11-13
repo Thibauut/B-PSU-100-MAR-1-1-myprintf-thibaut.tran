@@ -48,7 +48,7 @@ void str_to_octal(char *str)
 int nb_to_octal(unsigned int nb)
 {
     int i = 0;
-    int *oct_nb = malloc(sizeof(int) * (nb + 1));
+    int *oct_nb = malloc(sizeof(int) * 1000);
     while (nb > 0) {
         oct_nb[i] = nb % 8;
         nb = nb / 8;

@@ -19,15 +19,15 @@ int my_printf(char *type, ...)
             i += 1;
             while (type[i] == ' ')
                 i += 1;
-            if (type[i] == '%')
-                i += 1;
             if (type[i] <= '9' && type[i] >= '0')
                 check_nb(type, i);
             i = check_type(type, i, list);
             if (i == 84)
                 return 84;
-        } else
+        }
+        else {
             my_putchar(type[i]);
+        }
     }
     va_end (list);
     return (0);
