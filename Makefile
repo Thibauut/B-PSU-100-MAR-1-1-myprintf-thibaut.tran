@@ -6,6 +6,7 @@
 ##
 
 SRC	=	src/check_type.c	\
+		src/my_nblen.c	\
 		src/my_printf.c	\
 		src/my_put_nbr.c	\
 		src/my_put_to_binary.c	\

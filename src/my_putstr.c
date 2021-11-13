@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2021
-** B-CPE-101-MAR-1-1-bistromatic-mohamed.mansour
+** B-PSU-100-MAR-1-1-myprintf-thibaut.tran
 ** File description:
 ** my_putstr.c
 */

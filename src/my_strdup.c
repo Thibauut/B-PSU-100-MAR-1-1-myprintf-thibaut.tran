@@ -1,8 +1,8 @@
 /*
 ** EPITECH PROJECT, 2021
-** my_strdup.c
+** B-PSU-100-MAR-1-1-myprintf-thibaut.tran
 ** File description:
-** header
+** my_strdup.c
 */
 
 #include "../include/my.h"
@@ -12,7 +12,6 @@ char *my_strdup(char *src)
     int a = 0;
     char *rep;
     int size = 0;
-
     while (src[size] != '\0')
         size++;
     rep = malloc(sizeof(char) * size + 1);

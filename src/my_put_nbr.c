@@ -1,6 +1,6 @@
 /*
 ** EPITECH PROJECT, 2021
-** B-CPE-101-MAR-1-1-infinadd-thibaut.tran
+** B-PSU-100-MAR-1-1-myprintf-thibaut.tran
 ** File description:
 ** my_put_nbr.c
 */
