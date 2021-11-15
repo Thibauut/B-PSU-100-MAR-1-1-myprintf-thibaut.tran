@@ -43,7 +43,7 @@ int type_spaces(char *type, int i, va_list tmp_list, int size)
     return (type_spaces2(type, i, tmp_list, size));
 }
 
-int check_spaces(char *type, int i, va_list tmp_list)
+int check_spaces(char *type, int i, va_list tmp_list, verif diese, va_list list)
 {
     int nb = 0, size = 1;
     while (type[i] <= 57 && type[i] >= 48) {
@@ -53,9 +53,14 @@ int check_spaces(char *type, int i, va_list tmp_list)
     }
     nb = nb / 10;
     size = type_spaces(type, i, tmp_list, size);
+    if ((diese == true && type[i] == 'o') || (diese == true && type[i] == 'x')
+    || (diese == true && type[i] == 'X'))
+        size += 1;
     while (nb - size > 0) {
         nb -= 1;
         my_putchar(' ');
     }
+    if (diese == true)
+        check_hashtag(type, i, tmp_list, list);
     return (i);
 }

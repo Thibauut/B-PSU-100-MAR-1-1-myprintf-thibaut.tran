@@ -43,10 +43,13 @@ int type_spaces_left(char *type, int i, va_list tmp_list, int size)
     return (type_spaces2(type, i, tmp_list, size));
 }
 
-int check_spaces_left(char *type, int i, va_list tmp_list, int stock)
+int check_spaces_left(char *type, int i, va_list tmp_list, int stock, verif diese)
 {
     int nb = stock, size = 1;
     size = type_spaces(type, i, tmp_list, size);
+    if ((diese == true && type[i] == 'o') || (diese == true && type[i] == 'x')
+    || (diese == true && type[i] == 'X'))
+        size += 1;
     while (nb - size > 0) {
         nb -= 1;
         my_putchar(' ');
@@ -54,13 +57,15 @@ int check_spaces_left(char *type, int i, va_list tmp_list, int stock)
     return (i);
 }
 
-int spaces_left(char *type, int i, va_list tmp_list, va_list list)
+int spaces_left(char *type, int i, va_list tmp_list, va_list list, verif diese)
 {
     i += 1;
     int stock = my_getnbr(type);
     while (type[i] <= '9' && type[i] >= '0')
         i += 1;
+    if (diese == true)
+        i = check_hashtag(type, i, tmp_list, list);
     i = check_type(type, i, list);
-    i = check_spaces_left(type, i, tmp_list, stock);
+    i = check_spaces_left(type, i, tmp_list, stock, diese);
     return (i);
 }
