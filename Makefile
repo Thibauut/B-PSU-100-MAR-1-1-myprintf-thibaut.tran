@@ -13,10 +13,10 @@ SRC	=	src/check_type.c	\
 		src/my_put_to_hexadecimal.c	\
 		src/my_put_to_octal.c	\
 		src/my_put_uns_nbr.c	\
-		src/my_putchar.c	\
-		src/my_putstr.c	\
-		src/my_strdup.c	\
-		src/my_strlen.c
+		src/my_func_lib.c	\
+		src/check_spaces.c	\
+		src/check_spaces_left.c	\
+		src/my_printf.c
 
 OBJ	=	$(SRC:.c=.o)
 

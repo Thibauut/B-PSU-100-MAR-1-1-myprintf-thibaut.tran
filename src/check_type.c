@@ -44,7 +44,7 @@ int check_type(char *type, int i, va_list list)
             case 'S' : str_to_octal(va_arg(list, char *));
                 return (i);
             default :
-                check_type2(type, i, list);
+                return check_type2(type, i, list);
         }
     return (i);
 }

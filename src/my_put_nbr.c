@@ -7,8 +7,6 @@
 
 #include "../include/my.h"
 
-void my_putchar(char c);
-
 void my_put_nbr(int nb)
 {
     int a;
