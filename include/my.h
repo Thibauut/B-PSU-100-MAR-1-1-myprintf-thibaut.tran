@@ -35,13 +35,15 @@ void my_put_uns_nbr(unsigned int nb);
 
 int check_type(char *type, int i, va_list list);
 int check_type2(char *type, int i, va_list list);
-int check_spaces(char *type, int i, va_list tmp_list, verif diese, va_list list);
+int check_spaces(char *type, int i, va_list tmp_list, verif diese, va_list list, verif add);
 int check_hashtag(char *type, int i, va_list tmp_list, va_list list);
+int check_add(char *type, int i, va_list tmp_list, va_list list);
+int check_symb1(char *type, int i, va_list tmp_list, va_list list, verif diese);
 
 int type_spaces(char *type, int i, va_list tmp_list, int size);
 int type_spaces2(char *type, int i, va_list tmp_list, int size);
 int spaces_left(char *type, int i, va_list tmp_list, va_list list, verif diese);
-int check_symb(char *type, int i, va_list tmp_list, va_list list, verif diese);
+int check_neg(char *type, int i, va_list tmp_list, va_list list, verif diese);
 int check_spaces_left(char *type, int i, va_list tmp_list, int stock, verif diese);
 
 int type_spaces_left(char *type, int i, va_list tmp_list, int size);

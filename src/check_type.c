@@ -21,6 +21,9 @@ int check_type2(char *type, int i, va_list list)
                 return (i);
             case '%' : my_putchar('%');
                 return (i);
+            case 'p' : my_putstr("0x");
+                nb_to_hexadecimal_for_min(va_arg(list, int));
+                return (i);
             default :
                 return (84);
         }
