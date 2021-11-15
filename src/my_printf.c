@@ -18,7 +18,11 @@ int my_printf(char *type, ...)
         if (type[i] == '%') {
             i += 1;
             va_copy(tmp_list, list);
-            if (type[i] == ' ' || type[i] == '-') {
+            if (type[i] == ' ') {
+                while (type[i] == ' ')
+                i += 1;
+            }
+            if (type[i] == '-') {
                 i = check_symb(type, i, tmp_list, list);
                 continue;
             }
@@ -36,10 +40,6 @@ int my_printf(char *type, ...)
 
 int check_symb(char *type, int i, va_list tmp_list, va_list list)
 {
-    if (type[i] == ' ') {
-        while (type[i] == ' ')
-            i += 1;
-    }
     if (type[i] == '-')
         i = spaces_left(type, i, tmp_list, list);
     return (i);
