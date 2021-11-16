@@ -53,9 +53,10 @@ int check_spaces(char *type, int i, va_list tmp_list, verif diese, va_list list,
     }
     nb = nb / 10;
     size = type_spaces(type, i, tmp_list, size);
-    if ((diese == true && type[i] == 'o') || (diese == true && type[i] == 'x')
-    || (diese == true && type[i] == 'X'))
+    if ((diese == true && type[i] == 'o'))
         size += 1;
+    if ((diese == true && type[i] == 'x') || (diese == true && type[i] == 'X'))
+        size += 2;
     if ((add == true && type[i] == 'd') || (add == true && type[i] == 'i'))
         size += 1;
     while (nb - size > 0) {

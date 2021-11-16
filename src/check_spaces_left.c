@@ -47,9 +47,10 @@ int check_spaces_left(char *type, int i, va_list tmp_list, int stock, verif dies
 {
     int nb = stock, size = 1;
     size = type_spaces(type, i, tmp_list, size);
-    if ((diese == true && type[i] == 'o') || (diese == true && type[i] == 'x')
-    || (diese == true && type[i] == 'X'))
+    if ((diese == true && type[i] == 'o'))
         size += 1;
+    if ((diese == true && type[i] == 'x') || (diese == true && type[i] == 'X'))
+        size += 2;
     while (nb - size > 0) {
         nb -= 1;
         my_putchar(' ');

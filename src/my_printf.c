@@ -23,17 +23,31 @@ int my_printf(char *type, ...)
                 while (type[i] == ' ')
                 i += 1;
             }
-            if (type[i] == '#')
-                i = check_symb1(type, i, tmp_list, list, diese);
+            if (type[i] == '#') {
+                while (type[i + 1] == '#')
+                    i += 1;
+                diese = true;
+                i += 1;
+                if (type[i] == ' ') {
+                    while (type[i] == ' ')
+                        i += 1;
+                }
+                check_hashtag(type, i, tmp_list, list);
+            }
             if (type[i] == '+') {
+                while (type[i + 1] == '+')
+                    i += 1;
                 add = true;
                 i += 1;
                 if (type[i] == ' ') {
                     while (type[i] == ' ')
                     i += 1;
                 }
+                check_add(type, i, tmp_list, list);
             }
             if (type[i] == '-') {
+                while (type[i + 1] == '-')
+                    i += 1;
                 i = check_neg(type, i, tmp_list, list, diese);
                 diese = false;
                 continue;
@@ -49,18 +63,6 @@ int my_printf(char *type, ...)
     }
     va_end(tmp_list), va_end(list);
     return (0);
-}
-
-int check_symb1(char *type, int i, va_list tmp_list, va_list list, verif diese)
-{
-        diese = true;
-        i += 1;
-        if (type[i] == ' ') {
-            while (type[i] == ' ')
-                i += 1;
-        }
-        check_hashtag(type, i, tmp_list, list);
-    return (i);
 }
 
 int check_add(char *type, int i, va_list tmp_list, va_list list)
@@ -81,7 +83,7 @@ int check_hashtag(char *type, int i, va_list tmp_list, va_list list)
             return (i);
         case 'x' : my_putstr("0x");
             return (i);
-        case 'X' : my_putstr("0x");
+        case 'X' : my_putstr("0X");
             return (i);
         default :
             return (i);
