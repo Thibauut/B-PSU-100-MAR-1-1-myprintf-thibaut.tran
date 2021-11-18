@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2021
 ** B-PSU-100-MAR-1-1-myprintf-thibaut.tran
 ** File description:
-** my_putchar.c
+** my_func_lib.c
 */
 
 #include "../include/my.h"

@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2021
 ** B-PSU-100-MAR-1-1-myprintf-thibaut.tran
 ** File description:
-** disp_stdarg.c
+** my_printf.c
 */
 
 #include "../include/my.h"

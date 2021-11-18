@@ -23,7 +23,7 @@ int type_spaces_left2(char *type, int i, va_list tmp_list, int size)
         unsigned int uns_tmp = va_arg(tmp_list, int);
         size = my_nblen_uns(uns_tmp);
     }
-    return(size);
+    return (size);
 }
 
 int type_spaces_left(char *type, int i, va_list tmp_list, int size)
