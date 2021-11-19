@@ -48,6 +48,8 @@ int my_printf(char *type, ...)
             if (type[i] == '-') {
                 while (type[i + 1] == '-')
                     i += 1;
+                if (type[i + 1] == '#' || type[i + 1] == '+')
+                    i += 1;
                 i = check_neg(type, i, tmp_list, list, diese);
                 diese = false;
                 continue;
