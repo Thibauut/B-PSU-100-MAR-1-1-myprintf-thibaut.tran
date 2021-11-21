@@ -15,7 +15,6 @@ void my_putchar(char c)
 void my_putstr(char *str)
 {
     if (str == NULL)
-        my_putstr("(null)");
         exit (84);
     for (int i = 0; str[i]; i += 1) {
         write(1, &str[i], 1);
